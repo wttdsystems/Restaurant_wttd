@@ -1,7 +1,13 @@
 # Restaurant WTTD
 
 This project was idealized by the members of the WTTD course in order to experience the realization of a real system together.
-### Virtual environment
+
+## Links
+ - [Trello](https://trello.com/b/bDtpk8Jm/projeto-restaurante)
+ - [Document](https://docs.google.com/document/d/1Ja4pKlef_GNj4axUTOpFCGb5aE5QG-XIfEvZTobEAVY/edit?userstoinvite=geancarlosgava@gmail.com)
+
+
+## Virtual environment
 
     python -m venv venv
 
@@ -13,7 +19,7 @@ Windows:
 
     source venv\script\activate
 
-### Install
+## Install
 
     pip install -r requirements.txt
 
