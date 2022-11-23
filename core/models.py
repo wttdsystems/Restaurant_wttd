@@ -10,8 +10,7 @@ class Item(models.Model):
     obs = models.TextField('Observação', blank=True, null=True)
 
     def __str__(self):
-        return self.name
-    
+        return self.name    
     class Meta:
         verbose_name = 'Item'
         verbose_name_plural = 'Itens'
@@ -22,9 +21,11 @@ class Item(models.Model):
     def get_updated_at(self):
         return self.updated_at.strftime("%d/%m/%Y")
 
+
 class Waiter(models.Model):
     name = models.CharField(max_length=100)
     commission = models.DecimalField(decimal_places=2, max_digits=9)
+
 
 class Comand(models.Model):
     item_id = models.ForeignKey(Item, on_delete=models.CASCADE)
