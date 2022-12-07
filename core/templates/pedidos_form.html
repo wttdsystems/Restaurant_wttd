@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Estilizando formulários com CSS - DevMedia</title>
+</head>
+<body>
+<form method="post" id="numero_comanda">
+	{% csrf_token %}
+	<div class="box">
+		<h1>Formulario de Contato :</h1>
+
+		<label>
+			<span>Numero da Comanda</span>
+ 			<input type="text" class="input_text" name="tab" id="name"/>
+
+		</label>
+
+		<label>
+ 			<span>Valor da comanda</span>
+			<input type="text" class="input_text" name="value" id="value"/>
+		 </label>
+         
+         <button type="submit" class="submit_button" name="somar">somar</button>
+	</div>
+	<div>
+		{{ total }}
+	</div>
+</form>
+</body>
+</html>
