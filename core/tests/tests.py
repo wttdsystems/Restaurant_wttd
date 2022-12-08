@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.shortcuts import resolve_url as r
 
-from core.models import Item
+# from core.models import Item
 
 
 class TestIndex(TestCase):
@@ -13,7 +13,7 @@ class TestIndex(TestCase):
 
     def test_template(self):
         self.assertTemplateUsed(self.response, 'pedidos_form.html')
-    
+
     def test_form(self):
         tags = (
             ('<form', 1),
