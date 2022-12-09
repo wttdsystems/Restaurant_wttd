@@ -8,24 +8,47 @@
 <form method="post" id="numero_comanda">
 	{% csrf_token %}
 	<div class="box">
-		<h1>Formulario de Contato :</h1>
-
-		<label>
-			<span>Numero da Comanda</span>
- 			<input type="text" class="input_text" name="tab" id="name"/>
-
+		<h1>Wttd_Restaurant</h1>
+		<div>
+			<label>
+				<span>Numero da Comanda</span>
+ 				<input type="text" class="input_text" name="tab"/>
+			</div>
 		</label>
+		<div>
+			<label for="cars">Choose a item:</label>
 
-		<label>
- 			<span>Valor da comanda</span>
-			<input type="text" class="input_text" name="value" id="value"/>
-		 </label>
+			<select name="item">
+				{%for k, v in items.items %}
+					<option value="{{ k }}">{{ k }} - {{ v }}</option>
+				{% endfor %}
+			</select>
+		</div>
          
-         <button type="submit" class="submit_button" name="somar">somar</button>
+         <button type="submit" class="submit_button" name="somar">Add</button>
 	</div>
 	<div>
 		{{ total }}
 	</div>
 </form>
+<br>
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">Tab</th>
+				<th scope="col">Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for k, v in total.items %}
+				<tr>
+					<td>{{ k }}</td>
+					<td>{{ v }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
 </body>
 </html>
