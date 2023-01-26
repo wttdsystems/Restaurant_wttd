@@ -1,0 +1,6 @@
+-r requirements.txt
+pytest
+pytest-django
+black
+isort
+pyproject-flake8

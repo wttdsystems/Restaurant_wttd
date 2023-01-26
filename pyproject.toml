@@ -1,0 +1,25 @@
+# pyproject.toml
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "Restaurant.settings"
+addopts = "-vv"
+# testpaths = [
+#     "**/tests/",
+# ]
+
+[tool.flake8]
+exclude = [".venv"]
+max-line-length = 120
+
+
+[tool.black]
+line-length = 120
+exclude = '''
+/(
+     \.git
+    | \.venv
+)/
+'''
+
+[tool.isort]
+profile = "black"
+src_paths = ["Restaurant", "core"]

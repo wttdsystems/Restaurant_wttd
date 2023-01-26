@@ -11,6 +11,7 @@ This project was idealized by the members of the WTTD course in order to experie
 
     python -m venv venv
 
+
 Linux:
 
     source venv/bin/activate
@@ -36,3 +37,44 @@ It will ask for username, password and email.
 With the superuser created, simply run the project.
 
     python manage.py runserver
+
+## Development
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+### Formatting
+
+```bash
+make fmt
+```
+
+or
+
+```
+isort Restaurant core
+black Restaurant core
+```
+
+### Linter
+
+```bash
+make linter
+```
+or
+
+```bash
+pflake8
+```
+
+## Run tests
+
+```bash
+make tests
+```
+or
+
+```bash
+pytest
+```
